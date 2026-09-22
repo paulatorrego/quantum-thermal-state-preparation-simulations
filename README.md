@@ -56,7 +56,7 @@ The system is not cooled by coupling it permanently to a large macroscopic reser
 
 ## 3. Repeated-interaction map
 
-Let \(\rho_n\) denote the system density matrix after the \(n\)-th cycle.
+Let $\rho_n$ denote the system density matrix after the $n$-th cycle.
 
 Each cycle implements a quantum channel
 
@@ -113,12 +113,12 @@ $$
 
 Here:
 
-* \(H_S\) is the Hamiltonian of the physical system,
-* \(H_B\) is the auxiliary-bath Hamiltonian,
-* \(A_\mu\) are local operators acting on the system,
-* \(R_\mu\) are operators acting on the bath,
-* \(\theta\) controls the system–bath coupling strength,
-* \(f(t)\) is a time-dependent modulation/filter function.
+* $H_S$ is the Hamiltonian of the physical system,
+* $H_B$ is the auxiliary-bath Hamiltonian,
+* $A_\mu$ are local operators acting on the system,
+* $R_\mu$ are operators acting on the bath,
+* $\theta$ controls the system–bath coupling strength,
+* $f(t)$ is a time-dependent modulation/filter function.
 
 A key ingredient of the protocol is therefore that the coupling is **not simply switched on at a constant strength**. Its time dependence is engineered to favor the energy-changing processes required for thermalization.
 
@@ -128,7 +128,7 @@ The protocol only requires local system–bath couplings and does not require th
 
 ## 5. Engineered filtering and detailed balance
 
-The time-dependent modulation \(f(t)\) acts as a frequency filter.
+The time-dependent modulation $f(t)$ acts as a frequency filter.
 
 The central idea is to make transitions involving different system energy differences occur with approximately the relative weights required by thermal equilibrium.
 
@@ -145,11 +145,11 @@ $$
 O(\theta^2),
 $$
 
-where \(\hat{\rho}\) is the steady state of the implemented protocol.
+where $\hat{\rho}$ is the steady state of the implemented protocol.
 
 This perturbative scaling is one of the central numerical signatures studied in this project.
 
-The protocol parameters include the inverse temperature \(\beta\), coupling strength \(\theta\), bath energy scale \(h\), Trotter step \(\delta\), reset time \(T\), and randomization parameter \(\lambda\).
+The protocol parameters include the inverse temperature $\beta$, coupling strength $\theta$, bath energy scale $h$, Trotter step $\delta$, reset time $T$, and randomization parameter $\lambda$.
 
 ---
 
@@ -157,7 +157,7 @@ The protocol parameters include the inverse temperature \(\beta\), coupling stre
 
 In addition to the dissipative system–bath interaction, the protocol includes a short randomization step.
 
-This step consists of a short Hamiltonian evolution for a random time and is designed to suppress unwanted coherences in the energy eigenbasis of \(H_S\).
+This step consists of a short Hamiltonian evolution for a random time and is designed to suppress unwanted coherences in the energy eigenbasis of $H_S$.
 
 The randomization does not change the overall resource scaling of the protocol, but helps avoid coherent effects and resonances that can prevent accurate thermalization.
 
@@ -199,7 +199,7 @@ $$
 d = 2^N.
 $$
 
-A density matrix therefore contains \(4^N\) complex matrix elements.
+A density matrix therefore contains $4^N$ complex matrix elements.
 
 Consequently, explicitly storing and evolving the density matrix rapidly becomes impractical as the system size increases.
 
@@ -276,7 +276,7 @@ For each trajectory:
 
 Physical observables are obtained by averaging over independent trajectories.
 
-This avoids explicitly storing a \(2^N\times2^N\) density matrix and instead exploits the low-entanglement structure of the evolving wavefunctions.
+This avoids explicitly storing a $2^N\times2^N$ density matrix and instead exploits the low-entanglement structure of the evolving wavefunctions.
 
 ---
 
@@ -292,7 +292,7 @@ bond dimension:             χ
 system size:                N
 ```
 
-the storage and contraction costs can remain manageable when the required \(\chi\) stays moderate.
+the storage and contraction costs can remain manageable when the required $\chi$ stays moderate.
 
 The bond dimension is therefore an important diagnostic in this project.
 
@@ -352,7 +352,7 @@ An effective channel can be constructed directly on the system degrees of freedo
 
 This representation is useful for rapidly screening protocol parameters such as:
 
-* \(\theta\),
+* $\theta$,
 * reset time,
 * bath parameters,
 * randomization,
@@ -398,7 +398,7 @@ How does the statistical error decrease as the number of trajectories is increas
 
 ### System-size scaling
 
-How do thermalization accuracy, bond dimension and computational cost change with \(N\)?
+How do thermalization accuracy, bond dimension and computational cost change with $N$?
 
 ### Local thermalization
 
@@ -443,7 +443,7 @@ The tensor-network calculations then extend the same physical protocol to larger
 
 The tensor-network results involve several distinct sources of error:
 
-* finite system–bath coupling \(\theta\),
+* finite system–bath coupling $\theta$,
 * incomplete convergence with the number of protocol cycles,
 * Trotter discretization,
 * MPS truncation,
@@ -454,7 +454,7 @@ The numerical analysis therefore separates physical and numerical convergence wh
 
 In particular, the project studies convergence with respect to:
 
-* \(\theta\),
+* $\theta$,
 * number of cycles,
 * MPS bond dimension / truncation cutoff,
 * number of trajectories,
